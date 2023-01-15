@@ -7,7 +7,11 @@
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
 }
-
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
 :root {
   --primary-color: #131313;
   --secondary-color: #ff900e;
@@ -89,7 +93,7 @@ nav {
 }
 
 /* -------------- main area ------------------ */
-main {
+.feature-list {
   padding: 120px;
 }
 .feature-list {
@@ -108,6 +112,7 @@ main {
   font-weight: 500;
   font-size: 42px;
   line-height: 53px;
+  color: var(--primary-color);
 }
 
 .feature-list-info .span-1 {
@@ -127,7 +132,161 @@ main {
   width: 300px;
 }
 
-/*------------------Responsive Media query ----------------- */
+/* <!------------feature love and enjoy  ----------> */
+
+.feature-2 {
+  display: flex;
+  gap: 54px;
+  justify-content: space-between;
+  padding: 0 90px;
+}
+
+.feature-2-img img {
+  width: 514px;
+  height: 800px;
+}
+
+.feature-2-title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--primary-color);
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 21px;
+  padding-bottom: 24px;
+}
+.feature-2-des,
+.feature-2 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+.feature-2-items .item {
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 5px 5px 5px 5px rgb(238, 240, 241);
+  border-radius: 5px;
+}
+
+.feature-2-items .item h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  padding-bottom: 8px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 170px;
+  left: 130px;
+}
+
+.btn button {
+  width: 270px;
+  height: 180px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 70px;
+}
+
+.btn button p {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+/* <!-------------Some facts area-------------- --> */
+
+.some-facts {
+  padding: 0 90px;
+}
+
+.some-facts-title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  padding-bottom: 24px;
+}
+.some-facts {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+.some-facts-item {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 100px;
+}
+.some-facts-item .item img {
+  padding-bottom: 8px;
+}
+.some-facts-item .item p {
+  padding: 8px 0;
+}
+.some-facts-item .item {
+  width: 241.83px;
+  padding: 45px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+}
+
+/* -------------------unique section part -------------------*/
+
+
+
+
+/* -------------------Our sponser---------------- */
+.our-sponser {
+  padding: 0 90px;
+}
+.our-sponser-title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  padding-bottom: 24px;
+}
+.our-sponser-des {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.our-sponser {
+  text-align: center;
+  padding-top: 180px;
+}
+.our-sponser-item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+/* ------------------footer area -------------- */
+.footer p {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff4e7;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+   color: var(--text-color);
+}
+.footer {
+  padding: 0 90px;
+  margin: 150px 0;
+}
+
+/*------------------------------------------------
+               Responsive Media query 
+--------------------------------------------------- */
 
 @media screen and (max-width: 576px) {
   body,
@@ -136,29 +295,52 @@ main {
     overflow-x: hidden;
   }
 
-  .banner-info .banner-title {
-    font-size: 20px;
+  .banner-info .banner-title, .feature-list-info h2 {
+    font-size: 30px;
     line-height: 30px;
+    padding: 10px 0;
   }
 
   header,
-  main {
-    padding: 10px;
-  }
+  main, .feature-list, .some-facts, .our-sponser{
+    padding: 50px 10px;
 
+    
+  }
+   .feature-list-info, .some-facts-title, .some-facts-des{
+    text-align: center;
+   }
   .banner-img img,
-  .feature-list img {
+  .feature-list img, .feature-2 img {
     width: 100%;
+  
   }
 
   nav,
-  ul {
+  ul, .feature-2, .some-facts-item, .our-sponser-item, .our-sponser-item 
+   .item {
     flex-direction: column;
     padding: 30px 0;
   }
 
   .feature-list {
     grid-template-columns: repeat(1, 1fr);
-    
   }
+   
+  .btn button{
+    padding: 40px;
+    margin-right: 250px;
+    
+
+  }
+  .some-facts-item .item{
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .footer{
+    padding: 0;
+    margin: 0;
+  }
+  
 }
