@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
+
+/* ----------- Common area & utilities------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+:root {
+  --primary-color: #131313;
+  --secondary-color: #ff900e;
+  --text-color: #424242;
+  --common-color: #ffffff;
+}
+
+.btn-primary {
+  width: 180px;
+  height: 64px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  color: var(--common-color);
+  background: var(--secondary-color);
+  border: 0;
+  border-radius: 8px;
+}
+
+/* ----------- Header Area------------------- */
+
+header {
+  background: rgba(255, 144, 14, 0.1);
+  padding: 60px 120px;
+}
+
+/* ---------nav area ----------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 116px;
+}
+
+.nav-title h2 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--primary-color);
+}
+
+.nav-item ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-item ul li {
+  list-style: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+/* ------------------banner area --------------------- */
+
+.banner-info {
+  text-align: center;
+}
+
+.banner-info .banner-des {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
+  padding: 32px 0;
+}
+
+.banner-info .banner-title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 75px;
+}
+
+.banner-img img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* -------------- main area ------------------ */
+main {
+  padding: 120px;
+}
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.feature-list-info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
+  padding: 25px 0;
+}
+.feature-list-info h2 {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 53px;
+}
+
+.feature-list-info .span-1 {
+  color: var(--text-color);
+}
+.feature-list-info .span-2 {
+  color: var(--secondary-color);
+}
+
+.img-1 img {
+  margin-bottom: 30px;
+}
+.img-2 img {
+  margin-bottom: 30px;
+}
+.feature-list img {
+  width: 300px;
+}
+
+/*------------------Responsive Media query ----------------- */
+
+@media screen and (max-width: 576px) {
+  body,
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .banner-info .banner-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  header,
+  main {
+    padding: 10px;
+  }
+
+  .banner-img img,
+  .feature-list img {
+    width: 100%;
+  }
+
+  nav,
+  ul {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+
+  .feature-list {
+    grid-template-columns: repeat(1, 1fr);
+    
+  }
+}
