@@ -235,12 +235,60 @@ nav {
   padding: 45px;
   border: 1px solid var(--secondary-color);
   border-radius: 8px;
+  transition: all 2s ease;
+}
+.some-facts-item .item:hover {
+  transform: scale(1.2) rotate(360deg);
+  background-color: var(--secondary-color);
 }
 
 /* -------------------unique section part -------------------*/
 
+.architects-section {
+  margin-top: 100px;
+  background-color: var(--secondary-color);
+  color: var(--common-color);
+  padding: 40px 20px;
+}
 
+.architects-section-content h1 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+}
 
+.architects-section-content {
+  padding: 0 90px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.architects-section-content p {
+  padding: 10px 0;
+}
+
+.architects-list li {
+  list-style: none;
+}
+
+.architects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.architect {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+.architect img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
 
 /* -------------------Our sponser---------------- */
 .our-sponser {
@@ -277,7 +325,7 @@ nav {
   line-height: 23px;
   text-align: center;
 
-   color: var(--text-color);
+  color: var(--text-color);
 }
 .footer {
   padding: 0 90px;
@@ -295,30 +343,37 @@ nav {
     overflow-x: hidden;
   }
 
-  .banner-info .banner-title, .feature-list-info h2 {
+  .banner-info .banner-title,
+  .feature-list-info h2 {
     font-size: 30px;
     line-height: 30px;
     padding: 10px 0;
   }
 
   header,
-  main, .feature-list, .some-facts, .our-sponser{
+  main,
+  .feature-list,
+  .some-facts,
+  .our-sponser {
     padding: 50px 10px;
-
-    
   }
-   .feature-list-info, .some-facts-title, .some-facts-des{
+  .feature-list-info,
+  .some-facts-title,
+  .some-facts-des {
     text-align: center;
-   }
+  }
   .banner-img img,
-  .feature-list img, .feature-2 img {
+  .feature-list img,
+  .feature-2 img {
     width: 100%;
-  
   }
 
   nav,
-  ul, .feature-2, .some-facts-item, .our-sponser-item, .our-sponser-item 
-   .item {
+  ul,
+  .feature-2,
+  .some-facts-item,
+  .our-sponser-item,
+  .our-sponser-item .item {
     flex-direction: column;
     padding: 30px 0;
   }
@@ -326,21 +381,19 @@ nav {
   .feature-list {
     grid-template-columns: repeat(1, 1fr);
   }
-   
-  .btn button{
+
+  .btn button {
     padding: 40px;
     margin-right: 250px;
-    
-
   }
-  .some-facts-item .item{
+  .some-facts-item .item {
     width: 100%;
     margin: 10px 0;
   }
 
-  .footer{
+  .footer,
+  .architects-section-content {
     padding: 0;
     margin: 0;
   }
-  
 }
